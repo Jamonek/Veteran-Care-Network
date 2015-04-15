@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 2/14/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -37,7 +39,7 @@ class Search: UIViewController {
         // save location to database until we find better method
         var searchStringNS : NSString = searchTerms.text
         
-        defaults.setObject(searchStringNS, forKey: "mapSearchString")
+        defaults.setObject(searchStringNS, forKey: "mapSearchString") // saving of search term triggers observer in MapVC.swift
         
     }
 

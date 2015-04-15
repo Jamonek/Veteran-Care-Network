@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 2/4/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -24,11 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LocationManager?.requestWhenInUseAuthorization()
         
         // style the navigation bar
-        let navColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0)
+        let navColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0) // Color of navigation bar
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().barTintColor = navColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        var font : UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14)!
+        var font : UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14)! // Font for navigation title
         var shadow : NSShadow = NSShadow()
         shadow.shadowColor = UIColor.clearColor()
         shadow.shadowOffset = CGSizeMake(0.0, 4.0)

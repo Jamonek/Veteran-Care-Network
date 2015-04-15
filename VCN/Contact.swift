@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 2/14/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -17,8 +19,8 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Veteran Care Network"
-        self.navigationController?.title = "Contact"
+        self.title = "Veteran Care Network" // set navigation title
+        self.navigationController?.title = "Contact" // set tab bar item title
         
         // Do any additional setup after loading the view, typically from a nib.
         updateText.text = ""

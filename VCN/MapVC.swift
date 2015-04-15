@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 2/13/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -59,17 +61,17 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Veteran Care Network"
-        self.navigationController?.title = "Map"
+        self.title = "Veteran Care Network" // set navigation title
+        self.navigationController?.title = "Map" // set tab bar item title
         
         mapView.delegate = self
         
-        defaults.addObserver(self, forKeyPath: facilityBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
-        defaults.addObserver(self, forKeyPath: medicareBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
-        defaults.addObserver(self, forKeyPath: vaHospitalBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
-        defaults.addObserver(self, forKeyPath: vaClinicBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
-        defaults.addObserver(self, forKeyPath: showRadiusKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
-        defaults.addObserver(self, forKeyPath: mapSearchKeyConstant, options: NSKeyValueObservingOptions(), context: nil)
+        defaults.addObserver(self, forKeyPath: facilityBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer for checking if UISwitch value has changed to enable/disable map annotations for selected location type
+        defaults.addObserver(self, forKeyPath: medicareBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer for checking if UISwitch value has changed to enable/disable map annotations for selected location type
+        defaults.addObserver(self, forKeyPath: vaHospitalBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer for checking if UISwitch value has changed to enable/disable map annotations for selected location type
+        defaults.addObserver(self, forKeyPath: vaClinicBoolKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer for checking if UISwitch value has changed to enable/disable map annotations for selected location type
+        defaults.addObserver(self, forKeyPath: showRadiusKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer for checking if 40 mile radius should display or hide
+        defaults.addObserver(self, forKeyPath: mapSearchKeyConstant, options: NSKeyValueObservingOptions(), context: nil) // Observer that checks if a search has been requested
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestWhenInUseAuthorization()
@@ -82,9 +84,9 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
             
         }
         
-        mapView.showsUserLocation = true
-        mapView.mapType = MKMapType.Standard
-        mapView.zoomEnabled = true
+        mapView.showsUserLocation = true // Show current location of user
+        mapView.mapType = MKMapType.Standard // Standard look of the map
+        mapView.zoomEnabled = true // Allow the user to zoom on the map via finger gestures
         
         dispatch_async(dispatch_get_main_queue()) {
             if((self.defaults.valueForKey(self.facilityBoolKeyConstant) as! Bool) != false) {

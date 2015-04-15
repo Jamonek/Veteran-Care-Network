@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 3/23/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -28,7 +30,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let defaults = NSUserDefaults.standardUserDefaults()
-        if((defaults.valueForKey("ppType") as! NSString) == "fc") {
+        if((defaults.valueForKey("ppType") as! NSString) == "fc") { // Based on the selected facility type, determine number of cells to display
             return 5
         } else if((defaults.valueForKey("ppType") as! NSString) == "md") {
             return 6

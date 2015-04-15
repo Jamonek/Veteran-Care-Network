@@ -4,6 +4,8 @@
 //
 //  Created by Jamone Alexander Kelly on 2/14/15.
 //  Copyright (c) 2015 Veteran Care Network, LLC. All rights reserved.
+//  http://jamonek.com
+//  http://veterancarenetwork.com
 //
 
 import UIKit
@@ -16,8 +18,8 @@ class About: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Veteran Care Network"
-        self.navigationController?.title = "About"
+        self.title = "Veteran Care Network" // set navigation title
+        self.navigationController?.title = "About" // set tab bar item title
         
         // load default view into container
         let view = UIStoryboard(name: "Main", bundle: nil)
