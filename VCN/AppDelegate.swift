@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        LocationManager = CLLocationManager()
-        LocationManager?.requestWhenInUseAuthorization()
-        
         // style the navigation bar
         let navColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0) // Color of navigation bar
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
