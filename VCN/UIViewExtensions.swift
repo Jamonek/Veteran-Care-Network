@@ -1,3 +1,10 @@
+/*
+
+@author Andrew Bancroft
+@www http://www.andrewcbancroft.com/2014/07/27/fade-in-out-animations-as-class-extensions-with-swift/
+
+*/
+
 import Foundation
 import UIKit
 
