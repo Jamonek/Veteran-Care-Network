@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		647251901A8E5CE800C7D11D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472518F1A8E5CE800C7D11D /* MapVC.swift */; };
+		647251941A8FEBDD00C7D11D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647251931A8FEBDD00C7D11D /* MapKit.framework */; };
+		647251961A90236E00C7D11D /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251951A90236E00C7D11D /* About.swift */; };
+		647251981A9023D500C7D11D /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251971A9023D500C7D11D /* Search.swift */; };
+		6472519A1A90241F00C7D11D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251991A90241F00C7D11D /* Contact.swift */; };
 		648A32E31A82DAC200ABA0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E21A82DAC200ABA0C4 /* AppDelegate.swift */; };
 		648A32E61A82DAC200ABA0C4 /* VCN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E41A82DAC200ABA0C4 /* VCN.xcdatamodeld */; };
-		648A32E81A82DAC200ABA0C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E71A82DAC200ABA0C4 /* ViewController.swift */; };
+		648A32E81A82DAC200ABA0C4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E71A82DAC200ABA0C4 /* Home.swift */; };
 		648A32EB1A82DAC200ABA0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648A32E91A82DAC200ABA0C4 /* Main.storyboard */; };
 		648A32ED1A82DAC300ABA0C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648A32EC1A82DAC300ABA0C4 /* Images.xcassets */; };
 		648A32F01A82DAC300ABA0C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 648A32EE1A82DAC300ABA0C4 /* LaunchScreen.xib */; };
 		648A32FC1A82DAC300ABA0C4 /* VCNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32FB1A82DAC300ABA0C4 /* VCNTests.swift */; };
+		64A074811AA78560001B4E97 /* PinPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A074801AA78560001B4E97 /* PinPointAnnotation.swift */; };
+		64A074831AA7E257001B4E97 /* LayersSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A074821AA7E257001B4E97 /* LayersSubView.swift */; };
+		64A83E6D1AA43B4E00DA3AF1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A83E6C1AA43B4E00DA3AF1 /* CoreLocation.framework */; };
+		64AF51361AA685F3004B0D81 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AF51351AA685F3004B0D81 /* Legend.swift */; };
+		64B5098E1AC3EB2900AF6F53 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5098D1AC3EB2900AF6F53 /* Video.swift */; };
+		64B509901AC612F000AF6F53 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */; };
+		64B509921AC620C700AF6F53 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B509911AC620C700AF6F53 /* Director.swift */; };
+		64CFC6C11AC0407400E8F705 /* MapDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CFC6C01AC0407400E8F705 /* MapDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +40,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		648A32DD1A82DAC200ABA0C4 /* VCN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6472518F1A8E5CE800C7D11D /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		647251931A8FEBDD00C7D11D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		647251951A90236E00C7D11D /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		647251971A9023D500C7D11D /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		647251991A90241F00C7D11D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		648A32DD1A82DAC200ABA0C4 /* Veteran Care Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veteran Care Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		648A32E11A82DAC200ABA0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A32E21A82DAC200ABA0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648A32E51A82DAC200ABA0C4 /* VCN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VCN.xcdatamodel; sourceTree = "<group>"; };
-		648A32E71A82DAC200ABA0C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		648A32E71A82DAC200ABA0C4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		648A32EA1A82DAC200ABA0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		648A32EC1A82DAC300ABA0C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		648A32EF1A82DAC300ABA0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		648A32F51A82DAC300ABA0C4 /* VCNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		648A32F51A82DAC300ABA0C4 /* Veteran Care NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Veteran Care NetworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		648A32FA1A82DAC300ABA0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A32FB1A82DAC300ABA0C4 /* VCNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNTests.swift; sourceTree = "<group>"; };
+		64A074801AA78560001B4E97 /* PinPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPointAnnotation.swift; sourceTree = "<group>"; };
+		64A074821AA7E257001B4E97 /* LayersSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayersSubView.swift; sourceTree = "<group>"; };
+		64A83E6C1AA43B4E00DA3AF1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		64AF51351AA685F3004B0D81 /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		64B5098D1AC3EB2900AF6F53 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		64B509911AC620C700AF6F53 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		64CFC6C01AC0407400E8F705 /* MapDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A83E6D1AA43B4E00DA3AF1 /* CoreLocation.framework in Frameworks */,
+				647251941A8FEBDD00C7D11D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +89,8 @@
 		648A32D41A82DAC200ABA0C4 = {
 			isa = PBXGroup;
 			children = (
+				64A83E6C1AA43B4E00DA3AF1 /* CoreLocation.framework */,
+				647251931A8FEBDD00C7D11D /* MapKit.framework */,
 				648A32DF1A82DAC200ABA0C4 /* VCN */,
 				648A32F81A82DAC300ABA0C4 /* VCNTests */,
 				648A32DE1A82DAC200ABA0C4 /* Products */,
@@ -70,8 +100,8 @@
 		648A32DE1A82DAC200ABA0C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				648A32DD1A82DAC200ABA0C4 /* VCN.app */,
-				648A32F51A82DAC300ABA0C4 /* VCNTests.xctest */,
+				648A32DD1A82DAC200ABA0C4 /* Veteran Care Network.app */,
+				648A32F51A82DAC300ABA0C4 /* Veteran Care NetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +109,20 @@
 		648A32DF1A82DAC200ABA0C4 /* VCN */ = {
 			isa = PBXGroup;
 			children = (
+				64A074821AA7E257001B4E97 /* LayersSubView.swift */,
 				648A32E21A82DAC200ABA0C4 /* AppDelegate.swift */,
-				648A32E71A82DAC200ABA0C4 /* ViewController.swift */,
+				648A32E71A82DAC200ABA0C4 /* Home.swift */,
+				6472518F1A8E5CE800C7D11D /* MapVC.swift */,
+				64AF51351AA685F3004B0D81 /* Legend.swift */,
+				64CFC6C01AC0407400E8F705 /* MapDetail.swift */,
+				647251951A90236E00C7D11D /* About.swift */,
+				647251971A9023D500C7D11D /* Search.swift */,
+				647251991A90241F00C7D11D /* Contact.swift */,
 				648A32E91A82DAC200ABA0C4 /* Main.storyboard */,
+				64B5098D1AC3EB2900AF6F53 /* Video.swift */,
+				64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */,
+				64A074801AA78560001B4E97 /* PinPointAnnotation.swift */,
+				64B509911AC620C700AF6F53 /* Director.swift */,
 				648A32EC1A82DAC300ABA0C4 /* Images.xcassets */,
 				648A32EE1A82DAC300ABA0C4 /* LaunchScreen.xib */,
 				648A32E41A82DAC200ABA0C4 /* VCN.xcdatamodeld */,
@@ -118,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		648A32DC1A82DAC200ABA0C4 /* VCN */ = {
+		648A32DC1A82DAC200ABA0C4 /* Veteran Care Network */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 648A32FF1A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "VCN" */;
+			buildConfigurationList = 648A32FF1A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "Veteran Care Network" */;
 			buildPhases = (
 				648A32D91A82DAC200ABA0C4 /* Sources */,
 				648A32DA1A82DAC200ABA0C4 /* Frameworks */,
@@ -130,14 +171,14 @@
 			);
 			dependencies = (
 			);
-			name = VCN;
+			name = "Veteran Care Network";
 			productName = VCN;
-			productReference = 648A32DD1A82DAC200ABA0C4 /* VCN.app */;
+			productReference = 648A32DD1A82DAC200ABA0C4 /* Veteran Care Network.app */;
 			productType = "com.apple.product-type.application";
 		};
-		648A32F41A82DAC300ABA0C4 /* VCNTests */ = {
+		648A32F41A82DAC300ABA0C4 /* Veteran Care NetworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 648A33021A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "VCNTests" */;
+			buildConfigurationList = 648A33021A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "Veteran Care NetworkTests" */;
 			buildPhases = (
 				648A32F11A82DAC300ABA0C4 /* Sources */,
 				648A32F21A82DAC300ABA0C4 /* Frameworks */,
@@ -148,9 +189,9 @@
 			dependencies = (
 				648A32F71A82DAC300ABA0C4 /* PBXTargetDependency */,
 			);
-			name = VCNTests;
+			name = "Veteran Care NetworkTests";
 			productName = VCNTests;
-			productReference = 648A32F51A82DAC300ABA0C4 /* VCNTests.xctest */;
+			productReference = 648A32F51A82DAC300ABA0C4 /* Veteran Care NetworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,6 +205,12 @@
 				TargetAttributes = {
 					648A32DC1A82DAC200ABA0C4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5ZVEL82DN8;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					648A32F41A82DAC300ABA0C4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -171,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "VCN" */;
+			buildConfigurationList = 648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "Veteran Care Network" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +231,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				648A32DC1A82DAC200ABA0C4 /* VCN */,
-				648A32F41A82DAC300ABA0C4 /* VCNTests */,
+				648A32DC1A82DAC200ABA0C4 /* Veteran Care Network */,
+				648A32F41A82DAC300ABA0C4 /* Veteran Care NetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,8 +262,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				648A32E81A82DAC200ABA0C4 /* ViewController.swift in Sources */,
+				648A32E81A82DAC200ABA0C4 /* Home.swift in Sources */,
+				64B5098E1AC3EB2900AF6F53 /* Video.swift in Sources */,
+				647251961A90236E00C7D11D /* About.swift in Sources */,
+				64B509901AC612F000AF6F53 /* UIViewExtensions.swift in Sources */,
 				648A32E31A82DAC200ABA0C4 /* AppDelegate.swift in Sources */,
+				64CFC6C11AC0407400E8F705 /* MapDetail.swift in Sources */,
+				64A074831AA7E257001B4E97 /* LayersSubView.swift in Sources */,
+				647251981A9023D500C7D11D /* Search.swift in Sources */,
+				6472519A1A90241F00C7D11D /* Contact.swift in Sources */,
+				64B509921AC620C700AF6F53 /* Director.swift in Sources */,
+				64A074811AA78560001B4E97 /* PinPointAnnotation.swift in Sources */,
+				647251901A8E5CE800C7D11D /* MapVC.swift in Sources */,
+				64AF51361AA685F3004B0D81 /* Legend.swift in Sources */,
 				648A32E61A82DAC200ABA0C4 /* VCN.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +292,7 @@
 /* Begin PBXTargetDependency section */
 		648A32F71A82DAC300ABA0C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 648A32DC1A82DAC200ABA0C4 /* VCN */;
+			target = 648A32DC1A82DAC200ABA0C4 /* Veteran Care Network */;
 			targetProxy = 648A32F61A82DAC300ABA0C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -342,9 +400,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VCN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Veteran Care Network";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -352,9 +415,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VCN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Veteran Care Network";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -372,7 +440,7 @@
 				);
 				INFOPLIST_FILE = VCNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Veteran Care NetworkTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCN.app/VCN";
 			};
 			name = Debug;
@@ -387,7 +455,7 @@
 				);
 				INFOPLIST_FILE = VCNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Veteran Care NetworkTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCN.app/VCN";
 			};
 			name = Release;
@@ -395,7 +463,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "VCN" */ = {
+		648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "Veteran Care Network" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				648A32FD1A82DAC300ABA0C4 /* Debug */,
@@ -404,21 +472,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		648A32FF1A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "VCN" */ = {
+		648A32FF1A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "Veteran Care Network" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				648A33001A82DAC300ABA0C4 /* Debug */,
 				648A33011A82DAC300ABA0C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		648A33021A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "VCNTests" */ = {
+		648A33021A82DAC300ABA0C4 /* Build configuration list for PBXNativeTarget "Veteran Care NetworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				648A33031A82DAC300ABA0C4 /* Debug */,
 				648A33041A82DAC300ABA0C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -8,15 +8,36 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var LocationManager : CLLocationManager?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        LocationManager = CLLocationManager()
+        LocationManager?.requestWhenInUseAuthorization()
+        
+        // style the navigation bar
+        let navColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0)
+        UINavigationBar.appearance().barStyle = UIBarStyle.Black
+        UINavigationBar.appearance().barTintColor = navColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        var font : UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14)!
+        var shadow : NSShadow = NSShadow()
+        shadow.shadowColor = UIColor.clearColor()
+        shadow.shadowOffset = CGSizeMake(0.0, 4.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : font, NSShadowAttributeName: shadow]
+        
+        
+        // make the status bar white
+         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+
         return true
     }
 
@@ -49,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.veterancarenetwork.VCN" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -72,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
             dict[NSUnderlyingErrorKey] = error
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
