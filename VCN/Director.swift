@@ -16,7 +16,7 @@ class Director : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        println("Director called")
         let image = UIImage(named: "anthony") // Load our image asset of Anthony
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 95, height: 200))
         imageView.image = image
@@ -25,5 +25,6 @@ class Director : UIViewController {
         text.editable = false // Disable editing
         text.selectable = false // Disable highlighting/selecting of text
         text.addSubview(imageView) // Add the image to the UITextView
+        //text.layoutIfNeeded()
     }
 }

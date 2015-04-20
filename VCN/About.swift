@@ -24,7 +24,7 @@ class About: UIViewController {
         // load default view into container
         let view = UIStoryboard(name: "Main", bundle: nil)
         self.vc = view.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
-        let sub = self.vc.view
+        var sub = self.vc.view
         
         container.addSubview(sub)
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,12 +41,12 @@ class About: UIViewController {
         case 0:
             // load about
             self.vc = view.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
-            let sub = self.vc.view
+            var sub = self.vc.view
             container.addSubview(sub)
         case 1:
             // load director
             self.vc = view.instantiateViewControllerWithIdentifier("directorSub")as! UIViewController
-            let sub = self.vc.view
+            var sub = self.vc.view
             container.addSubview(sub)
         default:
             println("Nothing")

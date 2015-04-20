@@ -27,6 +27,7 @@
 		64B509901AC612F000AF6F53 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */; };
 		64B509921AC620C700AF6F53 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B509911AC620C700AF6F53 /* Director.swift */; };
 		64CFC6C11AC0407400E8F705 /* MapDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CFC6C01AC0407400E8F705 /* MapDetail.swift */; };
+		64D110FB1AE4A171002245D8 /* aboutSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D110FA1AE4A171002245D8 /* aboutSub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		64B509911AC620C700AF6F53 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
 		64CFC6C01AC0407400E8F705 /* MapDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetail.swift; sourceTree = "<group>"; };
+		64D110FA1AE4A171002245D8 /* aboutSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutSub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				647251971A9023D500C7D11D /* Search.swift */,
 				647251991A90241F00C7D11D /* Contact.swift */,
 				648A32E91A82DAC200ABA0C4 /* Main.storyboard */,
+				64D110FA1AE4A171002245D8 /* aboutSub.swift */,
 				64B5098D1AC3EB2900AF6F53 /* Video.swift */,
 				64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */,
 				64A074801AA78560001B4E97 /* PinPointAnnotation.swift */,
@@ -273,6 +276,7 @@
 				6472519A1A90241F00C7D11D /* Contact.swift in Sources */,
 				64B509921AC620C700AF6F53 /* Director.swift in Sources */,
 				64A074811AA78560001B4E97 /* PinPointAnnotation.swift in Sources */,
+				64D110FB1AE4A171002245D8 /* aboutSub.swift in Sources */,
 				647251901A8E5CE800C7D11D /* MapVC.swift in Sources */,
 				64AF51361AA685F3004B0D81 /* Legend.swift in Sources */,
 				648A32E61A82DAC200ABA0C4 /* VCN.xcdatamodeld in Sources */,

@@ -56,7 +56,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
         directionButton.tag = indexPath.row
         let streetAddress1 = defaults.valueForKey("ppStreet") as! NSString
         let streetAddress2 = defaults.valueForKey("ppSub") as! NSString
-        let streetAddress = "\(streetAddress1)\n\(streetAddress2)"
+        let streetAddress = "\(streetAddress1.capitalizedString)\n\(streetAddress2)"
         var image : UIImage!
         var imageView : UIImageView!
         
@@ -75,7 +75,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
                 imageView = UIImageView(image: image)
                 imageView.frame = CGRect(x: 10, y: 6, width: 44, height: 44)
                 cell.addSubview(imageView)
-                label.text = streetAddress.capitalizedString
+                label.text = streetAddress
                 label.fadeIn(duration: 10.0, delay: 4.0)
                 cell.addSubview(label)
             case 2:
@@ -121,7 +121,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
                 imageView = UIImageView(image: image)
                 imageView.frame = CGRect(x: 10, y: 6, width: 44, height: 44)
                 cell.addSubview(imageView)
-                label.text = streetAddress.capitalizedString
+                label.text = streetAddress
                 label.fadeIn(duration: 10.0, delay: 4.0)
                 cell.addSubview(label)
             case 2:
@@ -167,7 +167,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
                 imageView = UIImageView(image: image)
                 imageView.frame = CGRect(x: 10, y: 6, width: 44, height: 44)
                 cell.addSubview(imageView)
-                label.text = streetAddress.capitalizedString
+                label.text = streetAddress
                 label.fadeIn(duration: 10.0, delay: 4.0)
                 cell.addSubview(label)
             case 1:
