@@ -14,6 +14,6 @@ class aboutSub: UIViewController {
     
     override func viewDidLoad() {
         //aboutText.layoutIfNeeded()
-        println("About called")
+        println("About called") 
     }
 }
