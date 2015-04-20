@@ -16,7 +16,7 @@ class Director : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("Director called")
+        println("Director called ")
         let image = UIImage(named: "anthony") // Load our image asset of Anthony
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 95, height: 200))
         imageView.image = image
