@@ -23,17 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // style the navigation bar
-        let navColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0) // Color of navigation bar
+        let navColor = UIColor(red: 0.43, green: 0.42, blue: 0.42, alpha: 1.0) // Color of navigation bar
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().barTintColor = navColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        var font : UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14)! // Font for navigation title
+        var font : UIFont = UIFont(name: "MarkerFelt-Wide", size: 26)! // Font for navigation title
         var shadow : NSShadow = NSShadow()
         shadow.shadowColor = UIColor.clearColor()
         shadow.shadowOffset = CGSizeMake(0.0, 4.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : font, NSShadowAttributeName: shadow]
         
-        
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
         // make the status bar white
          UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
 

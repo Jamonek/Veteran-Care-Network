@@ -425,7 +425,6 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                 
                 pinView!.canShowCallout = true
                 pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.InfoDark) as! UIButton
-                
                 pinView!.image = pp.image
             }
             else {

@@ -14,7 +14,6 @@ class About: UIViewController {
     
     @IBOutlet var container: UIView!
     var vc : UIViewController!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,11 +21,14 @@ class About: UIViewController {
         self.navigationController?.title = "About" // set tab bar item title
         
         // load default view into container
-        let view = UIStoryboard(name: "Main", bundle: nil)
-        self.vc = view.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
+        let viewSub = UIStoryboard(name: "Main", bundle: nil)
+        self.vc = viewSub.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
         var sub = self.vc.view
-        
         container.addSubview(sub)
+        
+        container.clipsToBounds = true
+        
+        container.userInteractionEnabled = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,18 +38,20 @@ class About: UIViewController {
     }
     
     @IBAction func segChange(sender: UISegmentedControl) {
-        let view = UIStoryboard(name: "Main", bundle: nil)
+        let viewSub = UIStoryboard(name: "Main", bundle: nil)
         switch sender.selectedSegmentIndex {
         case 0:
             // load about
-            self.vc = view.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
+            self.vc = viewSub.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
             var sub = self.vc.view
             container.addSubview(sub)
+            container.clipsToBounds = true
         case 1:
             // load director
-            self.vc = view.instantiateViewControllerWithIdentifier("directorSub")as! UIViewController
+            self.vc = viewSub.instantiateViewControllerWithIdentifier("directorSub")as! UIViewController
             var sub = self.vc.view
             container.addSubview(sub)
+            container.clipsToBounds = true
         default:
             println("Nothing")
         }

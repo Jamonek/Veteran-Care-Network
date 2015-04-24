@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vTv-uG-RYF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vTv-uG-RYF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -44,12 +44,14 @@
                                 <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                 <items>
                                     <barButtonItem image="locationShown" id="qso-PB-Z5P" userLabel="showLocation">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="showLocation:" destination="KAV-pR-Nq9" id="lIt-55-fOP"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Fap-BR-lZl"/>
                                     <barButtonItem image="searchlocation" id="zTM-rF-TZv" userLabel="searchLocation">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="B8r-ye-UY8" kind="popoverPresentation" identifier="searchSegue" popoverAnchorBarButtonItem="zTM-rF-TZv" id="uQw-Hx-Qot">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -58,6 +60,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yjG-CP-Pyj"/>
                                     <barButtonItem image="layers" id="nUS-KK-Rg2" userLabel="Legend">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="Nkl-Yc-euB" kind="popoverPresentation" identifier="legendSegue" popoverAnchorBarButtonItem="nUS-KK-Rg2" id="LdQ-d1-WBm">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -66,6 +69,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gnJ-fV-xbD"/>
                                     <barButtonItem image="help" id="drc-Dk-EXg" userLabel="Help">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="vWK-A3-4rE" kind="popoverPresentation" identifier="helpSegue" popoverAnchorBarButtonItem="drc-Dk-EXg" id="djE-Qq-6pH">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -128,7 +132,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="LAe-5c-cNu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Hospital Information" id="IZ6-tJ-ssC">
                                 <cells>
@@ -448,6 +452,7 @@
                                     <segment title="Layers"/>
                                     <segment title="Legend"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="segmentChange:" destination="Nkl-Yc-euB" eventType="valueChanged" id="3NI-wv-gTq"/>
                                 </connections>
@@ -540,32 +545,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WdA-tj-lwp">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WdA-tj-lwp">
                                 <rect key="frame" x="200" y="52" width="200" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="gPc-6s-wGd"/>
+                                    <constraint firstAttribute="width" constant="200" id="ihq-gw-fFU"/>
                                 </constraints>
                                 <segments>
                                     <segment title="About Us"/>
                                     <segment title="Director"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ihq-gw-fFU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ihq-gw-fFU"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="segChange:" destination="NXE-91-7Ms" eventType="valueChanged" id="3FY-h3-vfY"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-tz-50q">
-                                <rect key="frame" x="0.0" y="88" width="600" height="444"/>
+                            <containerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-tz-50q">
+                                <rect key="frame" x="0.0" y="88" width="600" height="463"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xRU-zX-s7f" firstAttribute="top" secondItem="aW1-tz-50q" secondAttribute="bottom" constant="19" id="KY5-yG-3RF"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="leading" secondItem="pVB-Z3-FtX" secondAttribute="leading" id="fFk-Hl-Mlh"/>
-                            <constraint firstItem="WdA-tj-lwp" firstAttribute="top" secondItem="HTr-Be-jk4" secondAttribute="bottom" constant="8" symbolic="YES" id="jlX-Kz-FQE"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="top" secondItem="WdA-tj-lwp" secondAttribute="bottom" constant="8" symbolic="YES" id="rp5-hJ-cyD"/>
-                            <constraint firstAttribute="trailing" secondItem="aW1-tz-50q" secondAttribute="trailing" id="wKl-6y-aFX"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="centerX" secondItem="WdA-tj-lwp" secondAttribute="centerX" id="zqp-bm-Ws7"/>
+                            <constraint firstItem="aW1-tz-50q" firstAttribute="top" secondItem="WdA-tj-lwp" secondAttribute="bottom" constant="8" symbolic="YES" id="Llf-uW-a0y"/>
+                            <constraint firstItem="aW1-tz-50q" firstAttribute="centerX" secondItem="WdA-tj-lwp" secondAttribute="centerX" id="VAU-7A-Ic1"/>
+                            <constraint firstItem="WdA-tj-lwp" firstAttribute="top" secondItem="HTr-Be-jk4" secondAttribute="bottom" constant="8" symbolic="YES" id="Y2I-rJ-C22"/>
+                            <constraint firstItem="aW1-tz-50q" firstAttribute="bottom" secondItem="xRU-zX-s7f" secondAttribute="top" id="dam-pB-uW5"/>
+                            <constraint firstAttribute="trailing" secondItem="aW1-tz-50q" secondAttribute="trailing" id="pal-7s-TqD"/>
+                            <constraint firstItem="aW1-tz-50q" firstAttribute="leading" secondItem="pVB-Z3-FtX" secondAttribute="leading" id="uDM-Pg-HmZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Llf-uW-a0y"/>
+                                <exclude reference="VAU-7A-Ic1"/>
+                                <exclude reference="dam-pB-uW5"/>
+                                <exclude reference="pal-7s-TqD"/>
+                                <exclude reference="uDM-Pg-HmZ"/>
+                                <exclude reference="Y2I-rJ-C22"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="Llf-uW-a0y"/>
+                                <include reference="VAU-7A-Ic1"/>
+                                <include reference="dam-pB-uW5"/>
+                                <include reference="pal-7s-TqD"/>
+                                <include reference="uDM-Pg-HmZ"/>
+                                <include reference="Y2I-rJ-C22"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KUv-Zw-ll4"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -586,65 +622,18 @@
                         <viewControllerLayoutGuide type="bottom" id="chG-x8-59B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cvY-Zx-ENU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-OZ-gCx">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">VCN (Veteran Care Network) is a "non-governmental" veteran owned and operated veteran service organization formed to provide information on facilities and organizations nationwide that provide various levels of health care for veterans and their families, inside and outside of VA medical facilities. This service is extremely beneficial to ensure timely and competent health care for veterans nationwide and accomplishes a number of the goals set forth by the "Veterans Access, Choice and Accountability Act of 2014.
-         
-Specifically the goal of enabling veterans to have access to health care facilities outside of the VA system is made much easier because of our mobile app.
-
-We provide the name, address, phone number and type of facility for over 18,000 governmental  and  civilian health care locations. This information is obtain by going direct to our "Veteran Medical Services" online map from a PC or using our VCN mobile APP, which is compatible with both IOS and Android mobile devices. 
-
-This APP will drastically reduce or eliminate the frustration and wasted time experienced when it comes to finding services and treatment for veterans and their family. With the distribution of the new "Choice Cards", veterans who live at least 40 miles from a VA hospital, or who must travel by air, boat or ferry to access VA care, will be able to find the nearest approved non-government medical care facility. This feature will make healthcare more accessible and treatment more timely, which accomplishes the main goal of the 
-"Veterans Access, Choice and Accountability Act of 2014.
-
-In addition, we also offer live support in assisting veterans in locating the closest and most appropriate facility if they reside at least 40 miles away from a VA medical facility.
-
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">It is our goal to break the cycle of medical maltreatment and callous apathy shown to veterans and their families. When the power of choice is put into the hands of those who need medical service, as it should have always been, the level and quality of medical care is not only improved, proper and expedient medical care becomes a reality.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="-1" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                </variation>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <exclude reference="eCx-OZ-gCx"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
-                    <connections>
-                        <outlet property="aboutText" destination="eCx-OZ-gCx" id="Vqr-gl-Pgh"/>
-                    </connections>
+                    <size key="freeformSize" width="600" height="645"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4n-3o-dpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543.5" y="2685"/>
+            <point key="canvasLocation" x="1543" y="2684.625"/>
         </scene>
         <!--Home-->
         <scene sceneID="MFX-cl-aCc">
@@ -658,32 +647,87 @@ In addition, we also offer live support in assisting veterans in locating the cl
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="aDe-j7-oZC">
-                                <rect key="frame" x="0.0" y="16" width="600" height="568"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An application that will allow Veterans to locate nearby health care facilities for service." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXe-Ea-xVF">
                                 <rect key="frame" x="25" y="139" width="549" height="323"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vcn-logo" translatesAutoresizingMaskIntoConstraints="NO" id="krd-F2-Ucg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ej0-D9-XrB"/>
+                                    <constraint firstAttribute="width" constant="333" id="wDo-w5-sUf">
+                                        <variation key="heightClass=regular" constant="326"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ej0-D9-XrB"/>
+                                        <exclude reference="wDo-w5-sUf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ej0-D9-XrB"/>
+                                        <include reference="wDo-w5-sUf"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aDe-j7-oZC" secondAttribute="trailing" id="7du-j7-bu2"/>
+                            <constraint firstItem="krd-F2-Ucg" firstAttribute="centerX" secondItem="3aa-Tg-TFC" secondAttribute="centerX" id="0lr-NI-JXj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UXe-Ea-xVF" secondAttribute="trailing" constant="10" id="7iW-OO-u4K"/>
-                            <constraint firstItem="aDe-j7-oZC" firstAttribute="centerY" secondItem="UXe-Ea-xVF" secondAttribute="centerY" id="88j-uo-sdV"/>
                             <constraint firstItem="UXe-Ea-xVF" firstAttribute="top" secondItem="Z9M-uB-9Gl" secondAttribute="bottom" constant="75" id="Ddh-Ao-bYc"/>
                             <constraint firstItem="UXe-Ea-xVF" firstAttribute="leading" secondItem="3aa-Tg-TFC" secondAttribute="leadingMargin" constant="9" id="E4Q-ks-C1f"/>
-                            <constraint firstItem="aDe-j7-oZC" firstAttribute="leading" secondItem="3aa-Tg-TFC" secondAttribute="leading" id="eJG-De-LFo"/>
+                            <constraint firstItem="UXe-Ea-xVF" firstAttribute="top" secondItem="krd-F2-Ucg" secondAttribute="bottom" constant="56" id="H3B-u2-eOG">
+                                <variation key="heightClass=regular" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="UXe-Ea-xVF" firstAttribute="leading" secondItem="3aa-Tg-TFC" secondAttribute="leadingMargin" constant="9" id="NH0-40-c9S"/>
+                            <constraint firstItem="j7X-1q-2Kj" firstAttribute="top" secondItem="UXe-Ea-xVF" secondAttribute="bottom" constant="175" id="XBB-fS-Rte"/>
                             <constraint firstItem="UXe-Ea-xVF" firstAttribute="centerY" secondItem="3aa-Tg-TFC" secondAttribute="centerY" id="lM1-u5-c2G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UXe-Ea-xVF" secondAttribute="trailing" constant="10" id="snG-pV-Myg"/>
+                            <constraint firstItem="krd-F2-Ucg" firstAttribute="top" secondItem="Z9M-uB-9Gl" secondAttribute="bottom" constant="8" symbolic="YES" id="srM-gC-mMO">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="krd-F2-Ucg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0lr-NI-JXj"/>
+                                <exclude reference="srM-gC-mMO"/>
+                                <exclude reference="H3B-u2-eOG"/>
+                                <exclude reference="NH0-40-c9S"/>
+                                <exclude reference="snG-pV-Myg"/>
+                                <exclude reference="XBB-fS-Rte"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="krd-F2-Ucg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0lr-NI-JXj"/>
+                                <include reference="srM-gC-mMO"/>
+                                <exclude reference="7iW-OO-u4K"/>
+                                <exclude reference="Ddh-Ao-bYc"/>
+                                <exclude reference="E4Q-ks-C1f"/>
+                                <include reference="H3B-u2-eOG"/>
+                                <include reference="NH0-40-c9S"/>
+                                <exclude reference="lM1-u5-c2G"/>
+                                <include reference="snG-pV-Myg"/>
+                                <include reference="XBB-fS-Rte"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="tE2-Lb-Cvb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uli-TC-mwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="859"/>
+            <point key="canvasLocation" x="2118" y="858.75"/>
         </scene>
         <!--Contact-->
         <scene sceneID="2fC-Pk-LBm">
@@ -697,12 +741,6 @@ In addition, we also offer live support in assisting veterans in locating the cl
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="ErO-28-WUg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="769"/>
-                                </variation>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-df-NEr">
                                 <rect key="frame" x="16" y="255" width="270" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -720,7 +758,7 @@ In addition, we also offer live support in assisting veterans in locating the cl
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="206" width="55" height="21"/>
+                                    <rect key="frame" x="16" y="206" width="105" height="21"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="72" width="64" height="24"/>
@@ -750,6 +788,20 @@ In addition, we also offer live support in assisting veterans in locating the cl
                                     <rect key="frame" x="16" y="142" width="96" height="30"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-yY-NsL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="336" width="74" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendEmail:" destination="pYT-Oz-Kry" eventType="touchUpInside" id="20T-5J-U6C"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gft-0v-b1U">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
@@ -763,7 +815,13 @@ In addition, we also offer live support in assisting veterans in locating the cl
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="6Ep-yY-NsL"/>
                                 <exclude reference="gft-0v-b1U"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="6Ep-yY-NsL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -772,27 +830,7 @@ In addition, we also offer live support in assisting veterans in locating the cl
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Ch8-5Z-zxt">
-                        <barButtonItem key="rightBarButtonItem" id="NgS-Hd-zoH">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tvL-PP-Z8I">
-                                <rect key="frame" x="501" y="431" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="446" width="83" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendEmail:" destination="pYT-Oz-Kry" eventType="touchUpInside" id="faO-8b-cvm"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Ch8-5Z-zxt"/>
                     <connections>
                         <outlet property="contentText" destination="l5I-mr-btm" id="hh4-VU-I4o"/>
                         <outlet property="subjectText" destination="vfv-df-NEr" id="Pyd-bi-DeI"/>
@@ -801,7 +839,7 @@ In addition, we also offer live support in assisting veterans in locating the cl
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgL-PF-vjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94.5" y="2050.5"/>
+            <point key="canvasLocation" x="94" y="2050.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7yw-Dm-6k0">
@@ -811,7 +849,10 @@ In addition, we also offer live support in assisting veterans in locating the cl
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D1H-gu-DaQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="NHU-Xp-pvQ" kind="relationship" relationship="viewControllers" id="aJH-dp-eeC"/>
@@ -909,46 +950,18 @@ In addition, we also offer live support in assisting veterans in locating the cl
                         <viewControllerLayoutGuide type="bottom" id="Hmh-kR-Bct"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DGn-GV-jfM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meet our Director" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDH-Tf-et7">
-                                <rect key="frame" x="199" y="0.0" width="202" height="73"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" pagingEnabled="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ3-Pa-Yia">
-                                <rect key="frame" x="0.0" y="81" width="600" height="519"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Anthony Patterson is a native of Greensboro, North Carolina and has lived there since birth in 1980.  Anthony is the majority owner of Veteran Care Network, LLC (VCN).  He is also the Director/ Majority Owner of United Living, LLC (UL).  Established in 2003, UL is a mental health agency that service adults facing challenges do to intellectual/developmental disability (I/DD) or autism.  Prior to exploring entrepreneurship opportunities Anthony served 3 years in the US Army as a 13 Bravo Cannon Crew Member from 2000-2003
-
-During his 3 year period he also served a 6 month tour in Kosovo Europe.  The purpose was the continuing effort of piece keeping between Serbia and Albania.  Anthony received the NATO Medal, National Defense Service Medal, and Kosovo Campaign Medal for his role in the peace keeping mission.  Along with the continuation of entrepreneurship Anthony is also pursuing his Bachelors of Science in Psychology with minors in Criminal Justice, Strategic Intelligence, and Homeland Security at Liberty University, VA. </string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                </variation>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <exclude reference="XDH-Tf-et7"/>
-                                <exclude reference="BJ3-Pa-Yia"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
-                    <connections>
-                        <outlet property="text" destination="BJ3-Pa-Yia" id="7yo-5F-k7z"/>
-                    </connections>
+                    <size key="freeformSize" width="600" height="645"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr8-Aw-7IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598" y="2655"/>
+            <point key="canvasLocation" x="2176" y="2684.625"/>
         </scene>
         <!--Layers Sub-->
         <scene sceneID="BeM-Wg-fXj">
@@ -1141,7 +1154,6 @@ During his 3 year period he also served a 6 month tour in Kosovo Europe.  The pu
     </scenes>
     <resources>
         <image name="about" width="28" height="26"/>
-        <image name="bg1" width="320" height="568"/>
         <image name="contact" width="24" height="28"/>
         <image name="finger" width="346" height="346"/>
         <image name="healthFacility" width="48" height="48"/>
@@ -1154,5 +1166,6 @@ During his 3 year period he also served a 6 month tour in Kosovo Europe.  The pu
         <image name="searchlocation" width="100" height="100"/>
         <image name="vaClinic" width="48" height="48"/>
         <image name="vaRadius" width="48" height="48"/>
+        <image name="vcn-logo" width="403" height="267"/>
     </resources>
 </document>
