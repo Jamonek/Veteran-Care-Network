@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // style the navigation bar
-        let navColor = UIColor(red: 0.43, green: 0.42, blue: 0.42, alpha: 1.0) // Color of navigation bar
+        let navColor = UIColor(red: 0.31, green: 0.33, blue: 0.34, alpha: 0.95) // Color of navigation bar
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().barTintColor = navColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         // make the status bar white
          UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-
+        
         return true
     }
 

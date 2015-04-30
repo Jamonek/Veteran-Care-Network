@@ -40,6 +40,5 @@ class aboutSub: UIViewController {
         
         self.textView.layoutManager.allowsNonContiguousLayout = false
         //self.view.updateConstraintsIfNeeded()
-        println("Frame Width: \(self.view.frame.width) Height: \(self.view.frame.height)")
     }
 }

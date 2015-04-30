@@ -22,6 +22,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
     let locationManager = CLLocationManager()
     var userLat : Double
     var userLng : Double
+    var searchLat : Double
+    var searchLng : Double
     var popover: UIPopoverController? = nil
     @IBOutlet weak var showLocationButton: UIBarButtonItem!
     @IBOutlet weak var searchLocationButton: UIBarButtonItem!
@@ -49,12 +51,16 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
     required init(coder aDecoder: NSCoder) {
         userLat = 0.0
         userLng = 0.0
+        searchLat = 0.0
+        searchLng = 0.0
         super.init(coder: aDecoder)
     }
     
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         userLat = 0.0
         userLng = 0.0
+        searchLat = 0.0
+        searchLng = 0.0
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -144,7 +150,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                         var lat = vH.coordinate.latitude
                         var lon = vH.coordinate.longitude
                         var radius = CLLocation(latitude: lat as CLLocationDegrees, longitude: lon as CLLocationDegrees)
-                        println("Test remove VA Radius")
+                        //println("Test remove VA Radius")
                         self.removeRadiusCircle()
                     }
                 }
@@ -156,7 +162,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                         var lat = vH.coordinate.latitude
                         var lon = vH.coordinate.longitude
                         var radius = CLLocation(latitude: lat as CLLocationDegrees, longitude: lon as CLLocationDegrees)
-                        println("Test insert VA radius")
+                        //println("Test insert VA radius")
                         self.addRadiusCircle(radius)
                     }
                 }
@@ -165,17 +171,22 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
             var searchStringCheck = self.defaults.valueForKey(mapSearchKeyConstant) as! String
             if !searchStringCheck.isEmpty {
                 var geocoder = CLGeocoder()
-                println("Testing search")
+                //println("Testing search")
                 var searchString = defaults.valueForKey(mapSearchKeyConstant) as! String
                 geocoder.geocodeAddressString(searchString,completionHandler:  {(placemarks: [AnyObject]!, error: NSError!) -> Void in
                     if let placemark = placemarks?[0] as? CLPlacemark {
-                        println("Testing search")
+                         self.searchBool = true
+                        //println("Testing search")
                         //self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
                         self.userLat = placemark.location.coordinate.latitude
                         self.userLng = placemark.location.coordinate.longitude
-                        self.searchBool = true
+                        self.mapView.showsUserLocation = false
                         
                         dispatch_async(dispatch_get_main_queue(), {
+                            //self.removeLocations("md")
+                            //self.removeLocations("vc")
+                            //self.removeLocations("vh")
+                            //self.removeLocations("fc")
                             self.getCloseLocations("md")
                             self.getCloseLocations("vc")
                             self.getCloseLocations("vh")
@@ -189,19 +200,19 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                                 var lat = vH.coordinate.latitude
                                 var lon = vH.coordinate.longitude
                                 var radius = CLLocation(latitude: lat as CLLocationDegrees, longitude: lon as CLLocationDegrees)
-                                println("Test insert VA radius initial")
+                                //println("Test insert VA radius initial")
                                 self.addRadiusCircle(radius)
                             }
                         }
                         
                         let center = CLLocationCoordinate2D(latitude: self.userLat, longitude: self.userLng)
-                        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+                        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
                         self.zoomLevelValue = 1
                         self.mapView.setRegion(region, animated: true)
                         self.searchBool = false
                         
                     } else {
-                        println("Unable to locate")
+                        //println("Unable to locate")
                     }
                 })
             }
@@ -225,25 +236,25 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         case "fc":
             if self.hFLocations.count > 0 {
                 self.mapView.removeAnnotations(self.hFLocations as [AnyObject])
-                println("FC: \(self.hFLocations.count)")
+                //println("FC: \(self.hFLocations.count)")
                 self.hFLocations.removeAllObjects()
             }
         case "md":
             if self.hMLocations.count > 0 {
                 self.mapView.removeAnnotations(self.hMLocations as [AnyObject])
-                println("MD: \(self.hMLocations.count)")
+                //println("MD: \(self.hMLocations.count)")
                 self.hMLocations.removeAllObjects()
             }
         case "vh":
             if self.vHLocations.count > 0 {
                 self.mapView.removeAnnotations(self.vHLocations as [AnyObject])
-                println("VH: \(self.vHLocations.count)")
+                //println("VH: \(self.vHLocations.count)")
                 self.vHLocations.removeAllObjects()
             }
         case "vc":
             if self.vCLocations.count > 0 {
                 self.mapView.removeAnnotations(self.vCLocations as [AnyObject])
-                println("VC: \(self.vCLocations.count)")
+                //println("VC: \(self.vCLocations.count)")
                 self.vCLocations.removeAllObjects()
             }
         default:
@@ -260,7 +271,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
             let session = NSURLSession.sharedSession()
             let url: NSURL = NSURL(string: "http://api.veterancarenetwork.com/getAnnotations.php?type=distance&lat=\(self.userLat)&lon=\(self.userLng)&ref=\(table)")!
-            println("http://api.veterancarenetwork.com/getAnnotations.php?type=distance&lat=\(self.userLat)&lon=\(self.userLng)&ref=\(table)")
+            //println("http://api.veterancarenetwork.com/getAnnotations.php?type=distance&lat=\(self.userLat)&lon=\(self.userLng)&ref=\(table)")
             let networkTask = session.dataTaskWithURL(url, completionHandler: {data, response, error  -> Void in
                 var result =  NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as!
                 NSMutableDictionary
@@ -294,7 +305,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                                 annotation.networkType = (point["type"] as! String)
                                 annotation.phonenumber = phonenumber
                                 self.hFLocations.addObject(annotation)
-                                println("FC TYPE: \(table)")
+                                //println("FC TYPE: \(table)")
                             case "md":
                                 var title       = point["name"] as! String
                                 var coord       = CLLocationCoordinate2DMake(lat, lon)
@@ -308,7 +319,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                                 annotation.networkType = (point["type"] as! String)
                                 annotation.phonenumber = phonenumber
                                 self.hMLocations.addObject(annotation)
-                                println("MD TYPE: \(table)")
+                                //println("MD TYPE: \(table)")
                             case "vc":
                                 var title = "VA Clinic"
                                 var coord       = CLLocationCoordinate2DMake(lat, lon)
@@ -320,7 +331,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                                 annotation.zip = zipcode
                                 annotation.phonenumber = phonenumber
                                 self.vCLocations.addObject(annotation)
-                                println("VC TYPE: \(table)")
+                                //println("VC TYPE: \(table)")
                             case "vh":
                                 var title = "VA Hospital"
                                 var coord       = CLLocationCoordinate2DMake(lat, lon)
@@ -335,7 +346,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                                 if((self.defaults.valueForKey(self.showRadiusKeyConstant) as! Bool)) {
                                     self.addRadiusCircle(radius)
                                 }
-                                println("VH TYPE: \(table)")
+                                //println("VH TYPE: \(table)")
                             default:
                                 println("nothing")
                             }
@@ -387,7 +398,9 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         var locValue:CLLocationCoordinate2D = manager.location.coordinate
         let center = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        
+        self.userLat = locValue.latitude
+        self.userLng = locValue.longitude
+        self.mapView.showsUserLocation = true
         self.mapView.setRegion(region, animated: true)
     }
     
@@ -418,7 +431,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
             let identifier = "pinCustom:\(pp.type)"
             var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
             if pinView == nil {
-                println("Pinview was nil")
+                //println("Pinview was nil")
                 
                 //Create a plain MKAnnotationView if using a custom image...
                 pinView = MKAnnotationView(annotation: pp, reuseIdentifier: identifier)
@@ -477,7 +490,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         if((self.zoomLevelValue == 1) && ((sender.value as Double) == 0.05)) {
             sender.stepValue = 1
             self.zoomLevelValue = 0
-            println("Zoom level step called")
+            //println("Zoom level step called")
             self.centerSearch = CLLocationCoordinate2D(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude)
             self.regionSearch = MKCoordinateRegion(center: self.centerSearch!, span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
             self.mapView.setRegion(self.regionSearch!, animated: true)

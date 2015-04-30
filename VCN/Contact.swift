@@ -21,7 +21,9 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
         
         self.title = "Veteran Care Network" // set navigation title
         self.navigationController?.title = "Contact" // set tab bar item title
-        self.view.backgroundColor = UIColor(red: 0.43, green: 0.42, blue: 0.42, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.34, alpha: 0.85)
+        
+       
         // Do any additional setup after loading the view, typically from a nib.
         updateText.text = ""
     }

@@ -12,6 +12,7 @@ import UIKit
 
 class About: UIViewController {
     
+    @IBOutlet var segControl: UISegmentedControl!
     @IBOutlet var container: UIView!
     var vc : UIViewController!
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class About: UIViewController {
         self.title = "Veteran Care Network" // set navigation title
         self.navigationController?.title = "About" // set tab bar item title
         
+        //segControl.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.34, alpha: 0.85)
         // load default view into container
         let viewSub = UIStoryboard(name: "Main", bundle: nil)
         self.vc = viewSub.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController

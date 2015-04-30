@@ -28,6 +28,7 @@
 		64B509921AC620C700AF6F53 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B509911AC620C700AF6F53 /* Director.swift */; };
 		64CFC6C11AC0407400E8F705 /* MapDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CFC6C01AC0407400E8F705 /* MapDetail.swift */; };
 		64D110FB1AE4A171002245D8 /* aboutSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D110FA1AE4A171002245D8 /* aboutSub.swift */; };
+		64FC9C221AF1A2DE004F5261 /* launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC9C211AF1A2DE004F5261 /* launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		64B509911AC620C700AF6F53 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
 		64CFC6C01AC0407400E8F705 /* MapDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetail.swift; sourceTree = "<group>"; };
 		64D110FA1AE4A171002245D8 /* aboutSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutSub.swift; sourceTree = "<group>"; };
+		64FC9C211AF1A2DE004F5261 /* launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				64B5098F1AC612F000AF6F53 /* UIViewExtensions.swift */,
 				64A074801AA78560001B4E97 /* PinPointAnnotation.swift */,
 				64B509911AC620C700AF6F53 /* Director.swift */,
+				64FC9C211AF1A2DE004F5261 /* launch.swift */,
 				648A32EC1A82DAC300ABA0C4 /* Images.xcassets */,
 				648A32EE1A82DAC300ABA0C4 /* LaunchScreen.xib */,
 				648A32E41A82DAC200ABA0C4 /* VCN.xcdatamodeld */,
@@ -267,6 +270,7 @@
 			files = (
 				648A32E81A82DAC200ABA0C4 /* Home.swift in Sources */,
 				64B5098E1AC3EB2900AF6F53 /* Video.swift in Sources */,
+				64FC9C221AF1A2DE004F5261 /* launch.swift in Sources */,
 				647251961A90236E00C7D11D /* About.swift in Sources */,
 				64B509901AC612F000AF6F53 /* UIViewExtensions.swift in Sources */,
 				648A32E31A82DAC200ABA0C4 /* AppDelegate.swift in Sources */,

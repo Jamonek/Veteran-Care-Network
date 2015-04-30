@@ -44,14 +44,14 @@
                                 <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                 <items>
                                     <barButtonItem image="locationShown" id="qso-PB-Z5P" userLabel="showLocation">
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="showLocation:" destination="KAV-pR-Nq9" id="lIt-55-fOP"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Fap-BR-lZl"/>
                                     <barButtonItem image="searchlocation" id="zTM-rF-TZv" userLabel="searchLocation">
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="B8r-ye-UY8" kind="popoverPresentation" identifier="searchSegue" popoverAnchorBarButtonItem="zTM-rF-TZv" id="uQw-Hx-Qot">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -60,7 +60,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yjG-CP-Pyj"/>
                                     <barButtonItem image="layers" id="nUS-KK-Rg2" userLabel="Legend">
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="Nkl-Yc-euB" kind="popoverPresentation" identifier="legendSegue" popoverAnchorBarButtonItem="nUS-KK-Rg2" id="LdQ-d1-WBm">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -69,7 +69,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gnJ-fV-xbD"/>
                                     <barButtonItem image="help" id="drc-Dk-EXg" userLabel="Help">
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="vWK-A3-4rE" kind="popoverPresentation" identifier="helpSegue" popoverAnchorBarButtonItem="drc-Dk-EXg" id="djE-Qq-6pH">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -452,7 +452,7 @@
                                     <segment title="Layers"/>
                                     <segment title="Legend"/>
                                 </segments>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="segmentChange:" destination="Nkl-Yc-euB" eventType="valueChanged" id="3NI-wv-gTq"/>
                                 </connections>
@@ -554,7 +554,7 @@
                                     <segment title="About Us"/>
                                     <segment title="Director"/>
                                 </segments>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ihq-gw-fFU"/>
@@ -607,6 +607,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="container" destination="aW1-tz-50q" id="HDa-6R-IYl"/>
+                        <outlet property="segControl" destination="WdA-tj-lwp" id="f8P-lC-uo7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOM-Tg-F5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -851,7 +852,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
