@@ -11,10 +11,9 @@
 import UIKit
 import MessageUI
 
-class Contact: UIViewController, MFMailComposeViewControllerDelegate {
-    @IBOutlet var subjectText: UITextField!
-    @IBOutlet var contentText: UITextView!
-    @IBOutlet var updateText: UILabel!
+class Contact: UIViewController, MFMailComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +22,9 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
         self.navigationController?.title = "Contact" // set tab bar item title
         self.view.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.34, alpha: 0.85)
         
-       
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view, typically from a nib.
-        updateText.text = ""
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,21 +32,6 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func sendEmail(sender: UIButton) {
-        
-        if subjectText.text.isEmpty || contentText.text.isEmpty {
-            return
-        }
-        
-        var toRecipents = ["service@veterancarenetwork.com"]
-        var mc: MFMailComposeViewController = MFMailComposeViewController()
-        mc.mailComposeDelegate = self
-        mc.setSubject("\(subjectText.text)")
-        mc.setMessageBody(contentText.text, isHTML: false)
-        mc.setToRecipients(toRecipents)
-        
-        self.presentViewController(mc, animated: true, completion: nil)
-    }
 
     func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError) {
         switch result.value {
@@ -56,11 +40,7 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
         case MFMailComposeResultSaved.value:
             println("Mail saved")
         case MFMailComposeResultSent.value:
-            updateText.fadeIn(completion: {
-                (finished: Bool) -> Void in
-                self.updateText.text = "Mail successfully sent!"
-                self.updateText.fadeIn()
-            })
+            var test = "test"
         case MFMailComposeResultFailed.value:
             println("Mail sent failure: %@", [error.localizedDescription])
         default:
@@ -68,4 +48,56 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate {
         }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // Table View Data Source methods
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Send feedback"
+        case 1:
+            cell.textLabel?.text = "General"
+        case 2:
+            cell.textLabel?.text = "Help"
+        default:
+            cell.textLabel?.text = "Nothing"
+        }
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        if((indexPath.row % 2) == 0) {
+            cell.backgroundColor = UIColor(red:0.42, green:0.42, blue:0.42, alpha:1.0)
+        }
+        cell.tintColor = UIColor.blackColor()
+        return cell
+    }
+    
+    // Table View Delegate methods
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        var toRecipents = ["service@veterancarenetwork.com"]
+        var mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        switch indexPath.row {
+        case 0:
+            mc.setSubject("Feedback")
+        case 1:
+            mc.setSubject("General Contact")
+        case 2:
+            mc.setSubject("Help")
+        default:
+            mc.setSubject("Support Email")
+        }
+        mc.setMessageBody("", isHTML: false)
+        mc.setToRecipients(toRecipents)
+        
+        self.presentViewController(mc, animated: true, completion: nil)
+    }
+
 }
