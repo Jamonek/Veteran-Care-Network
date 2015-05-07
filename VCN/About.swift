@@ -52,13 +52,13 @@ class About: UIPageViewController ,UIPageViewControllerDataSource, UIPageViewCon
         let index = self.ids.indexOfObject(identifier!)
         println("pageViewControllerAfterPre: \(index as Int) Index: \(self.index)")
         //if the index is the end of the array, return nil since we dont want a view controller after the last one
-        if self.index >= 1 {
+        if  index >= 1 {
             
             return nil
         }
         
         //increment the index to get the viewController after the current index
-        self.index = self.index + 1
+        self.index = index + 1
         println("pageViewControllerAfter: \(index as Int) Index: \(self.index)")
         return self.viewControllerAtIndex(self.index)
     }
@@ -70,13 +70,13 @@ class About: UIPageViewController ,UIPageViewControllerDataSource, UIPageViewCon
         let index = self.ids.indexOfObject(identifier!)
         println("pageViewControllerBeforePre: \(index as Int) Index: \(self.index)")
         //if the index is 0, return nil since we dont want a view controller before the first one
-        if self.index <= 0 {
+        if index <= 0 {
             
             return nil
         }
         
         //decrement the index to get the viewController before the current one
-        self.index = self.index - 1
+        self.index = index - 1
         println("pageViewControllerBefore: \(index as Int) Index: \(self.index)")
         return self.viewControllerAtIndex(self.index)
     }

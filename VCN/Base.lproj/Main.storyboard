@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vTv-uG-RYF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,25 +20,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-dd-afT">
                                 <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                             </mapView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="baG-KK-tGv">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="qBH-Jz-1L9"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="qBH-Jz-1L9"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="qBH-Jz-1L9"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="mapSlideZoom:" destination="KAV-pR-Nq9" eventType="valueChanged" id="lTj-Rh-VIF"/>
-                                </connections>
-                            </slider>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sD-5D-snX">
                                 <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                 <items>
@@ -81,10 +61,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="baG-KK-tGv" firstAttribute="trailing" secondItem="oXm-13-Tcn" secondAttribute="trailingMargin" id="5uF-13-4W2"/>
-                            <constraint firstItem="4KE-Xi-wwn" firstAttribute="top" secondItem="baG-KK-tGv" secondAttribute="bottom" constant="8" symbolic="YES" id="Gm4-jB-SWB">
-                                <variation key="heightClass=regular-widthClass=compact" constant="38"/>
-                            </constraint>
                             <constraint firstItem="1sD-5D-snX" firstAttribute="leading" secondItem="Kkd-dd-afT" secondAttribute="leading" id="Nda-4g-rcw"/>
                             <constraint firstItem="1sD-5D-snX" firstAttribute="top" secondItem="M2E-z8-k8k" secondAttribute="bottom" id="U5p-Z3-msC"/>
                             <constraint firstAttribute="trailing" secondItem="Kkd-dd-afT" secondAttribute="trailing" id="W4E-I8-c3n"/>
@@ -93,24 +69,6 @@
                             <constraint firstItem="Kkd-dd-afT" firstAttribute="bottom" secondItem="4KE-Xi-wwn" secondAttribute="top" id="lRm-Yp-r43"/>
                             <constraint firstItem="1sD-5D-snX" firstAttribute="top" secondItem="Kkd-dd-afT" secondAttribute="top" id="ulp-7O-gwf"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="baG-KK-tGv"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="5uF-13-4W2"/>
-                                <exclude reference="Gm4-jB-SWB"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="baG-KK-tGv"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="5uF-13-4W2"/>
-                                <include reference="Gm4-jB-SWB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="4CW-TW-Gff"/>
@@ -544,17 +502,38 @@
                     <view key="view" contentMode="scaleToFill" id="cvY-Zx-ENU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fw-4V-EeZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1fw-4V-EeZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="1fw-4V-EeZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="gVN-f0-DH4"/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
+                    <connections>
+                        <outlet property="scrollView" destination="1fw-4V-EeZ" id="ntg-Ak-LbB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4n-3o-dpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="2962.875"/>
+            <point key="canvasLocation" x="2339" y="2962.5"/>
         </scene>
         <!--Home-->
         <scene sceneID="MFX-cl-aCc">
@@ -834,17 +813,38 @@
                     <view key="view" contentMode="scaleToFill" id="DGn-GV-jfM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiX-pa-Gp5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jiX-pa-Gp5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="jiX-pa-Gp5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WWC-42-TwP"/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
+                    <connections>
+                        <outlet property="scrollView" destination="jiX-pa-Gp5" id="i3c-qX-BSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr8-Aw-7IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4007" y="2623.875"/>
+            <point key="canvasLocation" x="4007" y="2623.5"/>
         </scene>
         <!--Layers Sub-->
         <scene sceneID="BeM-Wg-fXj">
