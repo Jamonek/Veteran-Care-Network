@@ -24,6 +24,8 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Medical Info"
+        
         tableViewData.delegate = self
         tableViewData.dataSource = self
     }
@@ -43,9 +45,9 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
         let defaults = NSUserDefaults.standardUserDefaults()
         let cell = UITableViewCell()
         cell.userInteractionEnabled = true
-        cell.setHighlighted(true, animated: true)
+        cell.setHighlighted(false, animated: true)
         cell.setEditing(false, animated: true)
-        var label = UILabel(frame: CGRect(x:70, y:0, width:230, height:60))
+        var label = UILabel(frame: CGRect(x:70, y:0, width:250, height:60))
         label.numberOfLines = 0
         var directionButton = UIButton(frame: CGRect(x: 70, y: 0, width: 90, height: 50))
         directionButton.userInteractionEnabled = true

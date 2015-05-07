@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().barTintColor = navColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        var font : UIFont = UIFont(name: "MarkerFelt-Wide", size: 22)! // Font for navigation title
+        var font : UIFont = UIFont(name: "HelveticaNeue-Medium", size: 22)! // Font for navigation title
         var shadow : NSShadow = NSShadow()
         shadow.shadowColor = UIColor.clearColor()
         shadow.shadowOffset = CGSizeMake(0.0, 4.0)

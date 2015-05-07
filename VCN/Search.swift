@@ -10,12 +10,12 @@
 
 import UIKit
 
-class Search: UIViewController {
+class Search: UIViewController, UITextFieldDelegate {
     @IBOutlet var searchTerms: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.searchTerms.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -41,7 +41,15 @@ class Search: UIViewController {
         
         defaults.setObject(searchStringNS, forKey: "mapSearchString") // saving of search term triggers observer in MapVC.swift
         
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.view.resignFirstResponder()
+        self.searchTerms.resignFirstResponder()
     }
-
+    
+    func textFieldShouldReturn(userText: UITextField) -> Bool {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        userText.resignFirstResponder()
+        return true;
+    }
     
 }

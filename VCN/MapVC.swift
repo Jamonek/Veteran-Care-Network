@@ -183,14 +183,23 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
                         self.mapView.showsUserLocation = false
                         
                         dispatch_async(dispatch_get_main_queue(), {
-                            //self.removeLocations("md")
-                            //self.removeLocations("vc")
-                            //self.removeLocations("vh")
-                            //self.removeLocations("fc")
+                            self.removeRadiusCircle()
+                            self.removeLocations("md")
+                            self.removeLocations("vc")
+                            self.removeLocations("vh")
+                            self.removeLocations("fc")
+                            if((self.defaults.valueForKey(self.medicareBoolKeyConstant) as! Bool) == true) {
                             self.getCloseLocations("md")
+                            }
+                            if((self.defaults.valueForKey(self.vaClinicBoolKeyConstant) as! Bool) == true) {
                             self.getCloseLocations("vc")
+                            }
+                            if((self.defaults.valueForKey(self.vaHospitalBoolKeyConstant) as! Bool) == true) {
                             self.getCloseLocations("vh")
+                            }
+                            if((self.defaults.valueForKey(self.facilityBoolKeyConstant) as! Bool) == true) {
                             self.getCloseLocations("fc")
+                            }
                         })
                         
                         let countLocations = self.vHLocations.count
@@ -411,9 +420,29 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         var locValue:CLLocationCoordinate2D = manager.location.coordinate
         let center = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        if(self.userLat != locValue.latitude && self.userLng != locValue.longitude) {
+            self.removeLocations("md")
+            self.removeLocations("vc")
+            self.removeLocations("vh")
+            self.removeLocations("fc")
+            self.removeRadiusCircle()
+        }
+        
         self.userLat = locValue.latitude
         self.userLng = locValue.longitude
         self.mapView.showsUserLocation = true
+        if((self.defaults.valueForKey(self.medicareBoolKeyConstant) as! Bool) == true) {
+            self.getCloseLocations("md")
+        }
+        if((self.defaults.valueForKey(self.vaClinicBoolKeyConstant) as! Bool) == true) {
+            self.getCloseLocations("vc")
+        }
+        if((self.defaults.valueForKey(self.vaHospitalBoolKeyConstant) as! Bool) == true) {
+            self.getCloseLocations("vh")
+        }
+        if((self.defaults.valueForKey(self.facilityBoolKeyConstant) as! Bool) == true) {
+            self.getCloseLocations("fc")
+        }
         self.mapView.setRegion(region, animated: true)
     }
     
