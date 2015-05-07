@@ -22,7 +22,7 @@ class Director : UIViewController {
         let imageView = UIImageView(frame: CGRect(x: 1, y: 8, width: 95, height: 170))
         imageView.image = image
         let path = UIBezierPath(rect: CGRectMake(0, 0, imageView.frame.width, imageView.frame.height)) // Needed for words to wrap around image of Anthony
-        text = UITextView(frame: CGRect(x: 1, y: 1, width: self.view.frame.width-20, height: 400))
+        text = UITextView(frame: CGRect(x: 1, y: 1, width: self.view.frame.width-20, height: 500))
         text.text = textV
         text.textContainer.exclusionPaths = [path] // Add path to UITextView
         text.editable = false // Disable editing
@@ -32,6 +32,5 @@ class Director : UIViewController {
         text.addSubview(imageView) // Add the image to the UITextView
         text.clipsToBounds = true
         self.view.addSubview(text)
-        println("Frame Width: \(self.view.frame.width) Height: \(self.view.frame.height)")
     }
 }

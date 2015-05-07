@@ -476,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BcG-S4-KGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586" y="2330"/>
+            <point key="canvasLocation" x="4398" y="2329.5"/>
         </scene>
         <!--help-->
         <scene sceneID="hRc-Ee-hcJ">
@@ -490,9 +490,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The present reality we must change!" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTp-vT-Mqg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click below to view our tutorial." lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTp-vT-Mqg">
                                 <rect key="frame" x="16" y="0.0" width="218" height="68"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -533,108 +533,28 @@
             </objects>
             <point key="canvasLocation" x="3915" y="2158"/>
         </scene>
-        <!--about seg-->
-        <scene sceneID="RvC-XH-1Tw">
-            <objects>
-                <viewController title="about seg" modalTransitionStyle="partialCurl" id="NXE-91-7Ms" customClass="About" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HTr-Be-jk4"/>
-                        <viewControllerLayoutGuide type="bottom" id="xRU-zX-s7f"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pVB-Z3-FtX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WdA-tj-lwp">
-                                <rect key="frame" x="200" y="52" width="200" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ihq-gw-fFU"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="About Us"/>
-                                    <segment title="Director"/>
-                                </segments>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ihq-gw-fFU"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="ihq-gw-fFU"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="segChange:" destination="NXE-91-7Ms" eventType="valueChanged" id="3FY-h3-vfY"/>
-                                </connections>
-                            </segmentedControl>
-                            <containerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-tz-50q">
-                                <rect key="frame" x="0.0" y="88" width="600" height="463"/>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="top" secondItem="WdA-tj-lwp" secondAttribute="bottom" constant="8" symbolic="YES" id="Llf-uW-a0y"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="centerX" secondItem="WdA-tj-lwp" secondAttribute="centerX" id="VAU-7A-Ic1"/>
-                            <constraint firstItem="WdA-tj-lwp" firstAttribute="top" secondItem="HTr-Be-jk4" secondAttribute="bottom" constant="8" symbolic="YES" id="Y2I-rJ-C22"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="bottom" secondItem="xRU-zX-s7f" secondAttribute="top" id="dam-pB-uW5"/>
-                            <constraint firstAttribute="trailing" secondItem="aW1-tz-50q" secondAttribute="trailing" id="pal-7s-TqD"/>
-                            <constraint firstItem="aW1-tz-50q" firstAttribute="leading" secondItem="pVB-Z3-FtX" secondAttribute="leading" id="uDM-Pg-HmZ"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Llf-uW-a0y"/>
-                                <exclude reference="VAU-7A-Ic1"/>
-                                <exclude reference="dam-pB-uW5"/>
-                                <exclude reference="pal-7s-TqD"/>
-                                <exclude reference="uDM-Pg-HmZ"/>
-                                <exclude reference="Y2I-rJ-C22"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="Llf-uW-a0y"/>
-                                <include reference="VAU-7A-Ic1"/>
-                                <include reference="dam-pB-uW5"/>
-                                <include reference="pal-7s-TqD"/>
-                                <include reference="uDM-Pg-HmZ"/>
-                                <include reference="Y2I-rJ-C22"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="KUv-Zw-ll4"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <connections>
-                        <outlet property="container" destination="aW1-tz-50q" id="HDa-6R-IYl"/>
-                        <outlet property="segControl" destination="WdA-tj-lwp" id="f8P-lC-uo7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QOM-Tg-F5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1564" y="1991"/>
-        </scene>
         <!--About Us-->
         <scene sceneID="etD-xy-ves">
             <objects>
-                <viewController storyboardIdentifier="aboutSub" title="About Us" id="RD7-vr-Fzg" customClass="aboutSub" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutSub" title="About Us" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RD7-vr-Fzg" customClass="aboutSub" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MEz-7S-eXx"/>
                         <viewControllerLayoutGuide type="bottom" id="chG-x8-59B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cvY-Zx-ENU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="645"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gVN-f0-DH4"/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="645"/>
+                    <size key="freeformSize" width="600" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4n-3o-dpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="2684.625"/>
+            <point key="canvasLocation" x="2339" y="2962.875"/>
         </scene>
         <!--Home-->
         <scene sceneID="MFX-cl-aCc">
@@ -867,12 +787,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="NXE-91-7Ms" kind="relationship" relationship="rootViewController" id="d1g-7L-02h"/>
+                        <segue destination="YHR-f3-ScH" kind="relationship" relationship="rootViewController" id="cCM-c0-DdR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScZ-Ph-Tdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781" y="2009"/>
+        </scene>
+        <!--About Page-->
+        <scene sceneID="wzO-2d-6fm">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="About Page" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="YHR-f3-ScH" customClass="About" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Hd-b6-Nic"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l2-aW-4nU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="1973.25"/>
         </scene>
         <!--Contact-->
         <scene sceneID="fny-Rl-ClV">
@@ -896,24 +826,25 @@
         <!--Director-->
         <scene sceneID="t82-6y-mso">
             <objects>
-                <viewController storyboardIdentifier="directorSub" title="Director" id="fHQ-R7-oiF" customClass="Director" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="directorSub" title="Director" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fHQ-R7-oiF" customClass="Director" customModule="Veteran_Care_Network" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvW-sW-yFW"/>
                         <viewControllerLayoutGuide type="bottom" id="Hmh-kR-Bct"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DGn-GV-jfM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="645"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WWC-42-TwP"/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="645"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="645"/>
+                    <size key="freeformSize" width="600" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr8-Aw-7IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2176" y="2684.625"/>
+            <point key="canvasLocation" x="4007" y="2623.875"/>
         </scene>
         <!--Layers Sub-->
         <scene sceneID="BeM-Wg-fXj">
@@ -1029,7 +960,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNS-Y3-VTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="2625.75"/>
+            <point key="canvasLocation" x="5089" y="2625.75"/>
         </scene>
         <!--Legend Sub-->
         <scene sceneID="A26-Zd-t9c">
@@ -1101,7 +1032,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYM-Ep-Gzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743" y="2629"/>
+            <point key="canvasLocation" x="5367" y="2628.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hjn-l9-L7O">
+            <objects>
+                <navigationController storyboardIdentifier="aboutUsNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zL8-i6-zSg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4pN-tg-03L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RD7-vr-Fzg" kind="relationship" relationship="rootViewController" id="6EW-WT-Wfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQB-HJ-D0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="2963.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3G6-Id-XfE">
+            <objects>
+                <navigationController storyboardIdentifier="directorNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UOU-e5-YgI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyu-Bl-7c8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fHQ-R7-oiF" kind="relationship" relationship="rootViewController" id="raI-pT-mnk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH6-co-8Vs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3195" y="2623.5"/>
         </scene>
     </scenes>
     <resources>

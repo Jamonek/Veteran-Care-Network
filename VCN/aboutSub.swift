@@ -40,5 +40,14 @@ class aboutSub: UIViewController {
         
         self.textView.layoutManager.allowsNonContiguousLayout = false
         //self.view.updateConstraintsIfNeeded()
+        
+        let arrow = UIImage(named: "rightarrow")
+        let arrview = UIImageView(image: arrow)
+        arrview.frame = CGRect(x: (self.view.frame.width/2)-40, y: 410, width: 50, height: 50)
+        self.view.addSubview(arrview)
+        
+        let label = UILabel(frame: CGRect(x: (self.view.frame.width/2)-40, y: 459, width: 120, height: 20))
+        label.text = "Swipe right"
+        self.view.addSubview(label)
     }
 }

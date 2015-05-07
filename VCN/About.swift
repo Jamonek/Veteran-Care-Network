@@ -10,54 +10,91 @@
 
 import UIKit
 
-class About: UIViewController {
+class About: UIPageViewController ,UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    @IBOutlet var segControl: UISegmentedControl!
-    @IBOutlet var container: UIView!
-    var vc : UIViewController!
+    var index = 0
+    var ids : NSArray = ["aboutUsNav", "directorNav"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Veteran Care Network" // set navigation title
         self.navigationController?.title = "About" // set tab bar item title
         
-        //segControl.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.34, alpha: 0.85)
-        // load default view into container
-        let viewSub = UIStoryboard(name: "Main", bundle: nil)
-        self.vc = viewSub.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
-        var sub = self.vc.view
-        container.addSubview(sub)
+        self.dataSource = self
+        self.delegate = self
+        let startingViewController = self.viewControllerAtIndex(self.index)
+        let viewControllers: NSArray = [startingViewController]
+        self.setViewControllers(viewControllers as! [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
-        container.clipsToBounds = true
         
-        container.userInteractionEnabled = true
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    func viewControllerAtIndex(index: Int) -> UINavigationController! {
+        println("viewControllerIndex: \(index)")
+        //first view controller = firstViewControllers navigation controller
+        switch index {
+        case 0:
+            return self.storyboard!.instantiateViewControllerWithIdentifier("aboutUsNav") as! UINavigationController
+        case 1:
+            return self.storyboard!.instantiateViewControllerWithIdentifier("directorNav") as! UINavigationController
+        default:
+            return nil
+        }
+        
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    
+        let identifier = viewController.restorationIdentifier
+        println("After ID: \(identifier!)")
+        let index = self.ids.indexOfObject(identifier!)
+        println("pageViewControllerAfterPre: \(index as Int) Index: \(self.index)")
+        //if the index is the end of the array, return nil since we dont want a view controller after the last one
+        if self.index >= 1 {
+            
+            return nil
+        }
+        
+        //increment the index to get the viewController after the current index
+        self.index = self.index + 1
+        println("pageViewControllerAfter: \(index as Int) Index: \(self.index)")
+        return self.viewControllerAtIndex(self.index)
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        let identifier = viewController.restorationIdentifier
+        println("Before ID: \(identifier!)")
+        let index = self.ids.indexOfObject(identifier!)
+        println("pageViewControllerBeforePre: \(index as Int) Index: \(self.index)")
+        //if the index is 0, return nil since we dont want a view controller before the first one
+        if self.index <= 0 {
+            
+            return nil
+        }
+        
+        //decrement the index to get the viewController before the current one
+        self.index = self.index - 1
+        println("pageViewControllerBefore: \(index as Int) Index: \(self.index)")
+        return self.viewControllerAtIndex(self.index)
+    }
+    
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        let count = self.ids.count
+        println("presentationCount: \(count)")
+        return self.ids.count
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func segChange(sender: UISegmentedControl) {
-        let viewSub = UIStoryboard(name: "Main", bundle: nil)
-        switch sender.selectedSegmentIndex {
-        case 0:
-            // load about
-            self.vc = viewSub.instantiateViewControllerWithIdentifier("aboutSub") as! UIViewController
-            var sub = self.vc.view
-            container.addSubview(sub)
-            container.clipsToBounds = true
-        case 1:
-            // load director
-            self.vc = viewSub.instantiateViewControllerWithIdentifier("directorSub")as! UIViewController
-            var sub = self.vc.view
-            container.addSubview(sub)
-            container.clipsToBounds = true
-        default:
-            println("Nothing")
-        }
-    }
 
-    
 }

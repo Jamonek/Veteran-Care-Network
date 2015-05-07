@@ -272,9 +272,22 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
             let session = NSURLSession.sharedSession()
             let url: NSURL = NSURL(string: "http://api.veterancarenetwork.com/getAnnotations.php?type=distance&lat=\(self.userLat)&lon=\(self.userLng)&ref=\(table)")!
             //println("http://api.veterancarenetwork.com/getAnnotations.php?type=distance&lat=\(self.userLat)&lon=\(self.userLng)&ref=\(table)")
-            let networkTask = session.dataTaskWithURL(url, completionHandler: {data, response, error  -> Void in
-                var result =  NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as!
+            var networkTask = session.dataTaskWithURL(url, completionHandler: {data, response, error  -> Void in
+                if(error != nil) {
+                    var alert = UIAlertController(title: "Error", message: "Unable to establish a connection.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    return
+                }
+                var err : NSError? = nil
+                var result =  NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as!
                 NSMutableDictionary
+                if(err != nil) {
+                    var alert = UIAlertController(title: "Error", message: "No results returned.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    return
+                }
                 var results : NSMutableDictionary = result["distance"] as! NSMutableDictionary
                 dispatch_async(dispatch_get_main_queue(), {
                     var status: AnyObject = results.valueForKey("status")!
