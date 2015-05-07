@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "Veteran Care Network" */;
+			buildConfigurationList = 648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "VCN" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -471,7 +471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "Veteran Care Network" */ = {
+		648A32D81A82DAC200ABA0C4 /* Build configuration list for PBXProject "VCN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				648A32FD1A82DAC300ABA0C4 /* Debug */,

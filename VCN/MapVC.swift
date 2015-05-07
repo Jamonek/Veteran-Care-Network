@@ -47,6 +47,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
     var zoomLevelValue = 0
     var centerSearch : CLLocationCoordinate2D? = nil
     var regionSearch : MKCoordinateRegion? = nil
+    var mapOCount : Int = 0
     
     required init(coder aDecoder: NSCoder) {
         userLat = 0.0
@@ -566,11 +567,13 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
         self.mapView.delegate = self
         var circle = MKCircle(centerCoordinate: location.coordinate, radius: 64373.8 /* 40 miles */ as CLLocationDistance)
         self.mapView.addOverlay(circle)
+        self.mapOCount++
     }
     
     func removeRadiusCircle(){
-        if(self.mapView.overlays.count > 0) {
+        if(self.mapOCount > 0) {
             self.mapView.removeOverlays(self.mapView.overlays!)
+            self.mapOCount--
         }
     }
     

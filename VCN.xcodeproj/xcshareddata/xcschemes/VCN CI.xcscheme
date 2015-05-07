@@ -17,7 +17,7 @@
                BlueprintIdentifier = "648A32DC1A82DAC200ABA0C4"
                BuildableName = "Veteran Care Network.app"
                BlueprintName = "Veteran Care Network"
-               ReferencedContainer = "container:Veteran Care Network.xcodeproj">
+               ReferencedContainer = "container:VCN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "648A32DC1A82DAC200ABA0C4"
             BuildableName = "Veteran Care Network.app"
             BlueprintName = "Veteran Care Network"
-            ReferencedContainer = "container:Veteran Care Network.xcodeproj">
+            ReferencedContainer = "container:VCN.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "648A32DC1A82DAC200ABA0C4"
             BuildableName = "Veteran Care Network.app"
             BlueprintName = "Veteran Care Network"
-            ReferencedContainer = "container:Veteran Care Network.xcodeproj">
+            ReferencedContainer = "container:VCN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "648A32DC1A82DAC200ABA0C4"
             BuildableName = "Veteran Care Network.app"
             BlueprintName = "Veteran Care Network"
-            ReferencedContainer = "container:Veteran Care Network.xcodeproj">
+            ReferencedContainer = "container:VCN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

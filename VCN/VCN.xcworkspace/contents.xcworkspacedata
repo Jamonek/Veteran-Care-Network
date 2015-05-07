@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Veteran Care Network.xcodeproj">
+      location = "group:../VCN.xcodeproj">
    </FileRef>
 </Workspace>
