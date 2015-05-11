@@ -84,6 +84,12 @@ class Contact: UIViewController, MFMailComposeViewControllerDelegate, UITableVie
         var toRecipents = ["service@veterancarenetwork.com"]
         var mc: MFMailComposeViewController = MFMailComposeViewController()
         mc.mailComposeDelegate = self
+        if(!MFMailComposeViewController.canSendMail()) {
+//            var alert = UIAlertController(title: "Error", message: "Email is not configured on this device. Please check your settings.", preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+            return
+        }
         switch indexPath.row {
         case 0:
             mc.setSubject("Feedback")

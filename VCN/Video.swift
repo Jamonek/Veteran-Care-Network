@@ -26,7 +26,7 @@ class Video : UIViewController {
     // Open tutorial of how to use the application on Youtube when "Video" button is tapped
     @IBAction func videoButtonPressed(sender: UIButton) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string:"https://www.youtube.com/watch?v=Goc6U8y3lg0")!) // Open link to YouTube in browser or app
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://www.youtube.com/watch?v=WhPx-fF_hNo")!) // Open link to YouTube in browser or app
     }
     
 }

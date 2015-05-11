@@ -12,6 +12,7 @@
 		647251961A90236E00C7D11D /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251951A90236E00C7D11D /* About.swift */; };
 		647251981A9023D500C7D11D /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251971A9023D500C7D11D /* Search.swift */; };
 		6472519A1A90241F00C7D11D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647251991A90241F00C7D11D /* Contact.swift */; };
+		64775DF41B0111B0008B5990 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64775DF31B0111B0008B5990 /* Device.swift */; };
 		648A32E31A82DAC200ABA0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E21A82DAC200ABA0C4 /* AppDelegate.swift */; };
 		648A32E61A82DAC200ABA0C4 /* VCN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E41A82DAC200ABA0C4 /* VCN.xcdatamodeld */; };
 		648A32E81A82DAC200ABA0C4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A32E71A82DAC200ABA0C4 /* Home.swift */; };
@@ -47,6 +48,7 @@
 		647251951A90236E00C7D11D /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		647251971A9023D500C7D11D /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		647251991A90241F00C7D11D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		64775DF31B0111B0008B5990 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		648A32DD1A82DAC200ABA0C4 /* Veteran Care Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veteran Care Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		648A32E11A82DAC200ABA0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A32E21A82DAC200ABA0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				648A32EE1A82DAC300ABA0C4 /* LaunchScreen.xib */,
 				648A32E41A82DAC200ABA0C4 /* VCN.xcdatamodeld */,
 				648A32E01A82DAC200ABA0C4 /* Supporting Files */,
+				64775DF31B0111B0008B5990 /* Device.swift */,
 			);
 			path = VCN;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				648A32E81A82DAC200ABA0C4 /* Home.swift in Sources */,
 				64B5098E1AC3EB2900AF6F53 /* Video.swift in Sources */,
 				64FC9C221AF1A2DE004F5261 /* launch.swift in Sources */,
+				64775DF41B0111B0008B5990 /* Device.swift in Sources */,
 				647251961A90236E00C7D11D /* About.swift in Sources */,
 				64B509901AC612F000AF6F53 /* UIViewExtensions.swift in Sources */,
 				648A32E31A82DAC200ABA0C4 /* AppDelegate.swift in Sources */,
