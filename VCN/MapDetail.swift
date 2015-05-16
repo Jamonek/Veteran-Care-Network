@@ -24,7 +24,7 @@ class MapDetail :  UITableViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Medical Info"
+        self.title = "Medical Facility View"
         
         tableViewData.delegate = self
         tableViewData.dataSource = self
