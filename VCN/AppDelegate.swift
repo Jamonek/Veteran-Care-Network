@@ -11,6 +11,8 @@
 import UIKit
 import CoreData
 import CoreLocation
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         // make the status bar white
          UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
+        Fabric.with([Crashlytics()])
+
         return true
     }
 
