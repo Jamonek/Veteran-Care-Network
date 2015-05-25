@@ -89,6 +89,11 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIP
             self.userLng = locationManager.location.coordinate.longitude
             self.mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true);
             
+        } else {
+            var alert = UIAlertController(title: "Error", message: "Please enable location services in your settings application.s", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return
         }
         
         mapView.showsUserLocation = true // Show current location of user
